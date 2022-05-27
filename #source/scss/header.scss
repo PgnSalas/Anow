@@ -1,0 +1,82 @@
+// =================================================MIXIN===============================
+@mixin FzLhLs ($Fz, $Lh, $Ls) {
+    font-size: $Fz;
+    line-height: $Lh;
+    letter-spacing: $Ls;
+}
+// ====================================HEADER===================================
+.header {
+    padding: 6px 0px 23px 0px;
+    background-color: #fff;
+    @media (max-width: 945px) {
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+.header__row {
+    margin: 0px 0px 0px 5.97%;
+    display: flex;
+    align-items: center;
+    @media (max-width: 540px) {
+        margin: 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+    }
+}
+.header__logo {
+    padding: 0px 210px 0px 0px;
+    & a {
+        font-weight: 700;
+        @include FzLhLs (28px, 160%, 1.1PX);
+        color: #222222;
+    }
+    @media (max-width: 858px) {
+        padding: 0px 150px 0px 0px;
+    }
+    @media (max-width: 620px) {
+        padding: 0px 80px 0px 0px;
+    }
+    @media (max-width: 540px) {
+        padding: 0px 0px 10px 0px;
+        & a {
+            font-size: 35px;
+        }
+    }
+}
+.header__menu {
+}
+.menu-header {
+}
+.menu-header__list {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 540px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.menu-header__item {
+    &:not(:last-child) {
+        padding: 0px 33px 0px 0px;
+    }
+    & a {
+        line-height: 1px;
+        letter-spacing: 0.2px;
+        color: #222222;
+    }
+    & a:hover {
+        color: #FD8558;
+    }
+    @media (max-width: 945px) {
+        margin: 0px 0px 20px 0px;
+    }
+    @media (max-width: 540px) {
+        &:not(:last-child) {
+            margin: 0px 0px 15px 0px;
+            padding: 0px 0px 0px 0px ;
+        }
+        font-size: 20px;
+    }
+}
